@@ -1,32 +1,28 @@
 <template>
-  <img src="./logo.png">
-  <h1>Hello Vue 3!</h1>
-  <button @click="inc">Clicked {{ count }} times.</button>
+  <grid />
 </template>
 
 <script>
-import { ref } from 'vue'
+import Grid from './TicTacToe/Grid.vue'
 
 export default {
-  setup() {
-    const count = ref(0)
-    const inc = () => {
-      count.value++
-    }
-
-    return {
-      count,
-      inc
-    }
+  components: {
+    Grid
   }
 }
 </script>
 
-<style scoped>
-img {
-  width: 200px;
+<style>
+body, html {
+  margin: 0;
+  padding: 0;
 }
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #202124;
 }
 </style>
